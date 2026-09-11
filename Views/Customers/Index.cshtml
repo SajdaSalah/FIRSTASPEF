@@ -1,0 +1,30 @@
+﻿@model IList<Customers>
+
+<div class="container mt-4">
+
+    <h2 class=" text-dark fw-bold mb-3"> Customers List </h2>
+
+    <table class="table table-bordered table-striped table-hover">
+
+        <thead class="table-dark">
+
+            <tr>
+                <th>ID</th>
+                <th> Name</th>
+                <th>Email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
